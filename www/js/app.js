@@ -1,4 +1,4 @@
-angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'building-blocks.services', 'ngResource'])
+angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'building-blocks.services'])
     .constant('API_URL', 'https://building-blockz.herokuapp.com/api/v1')
 
 
@@ -34,8 +34,17 @@ angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'buil
         controller: 'HomeController'
       }
     }
-  });
+  })
 
+  .state('tab.message', {
+    url: '/message',
+    views: {
+      'tab-message': {
+        templateUrl: 'templates/message/message.html',
+        controller: 'MessageController'
+      }
+    }
+  });
   $urlRouterProvider.otherwise('/tab/home');
 
 });

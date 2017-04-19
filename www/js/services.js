@@ -7,4 +7,14 @@ angular.module('building-blocks.services', [])
       isArray: true
     },
   });
+})
+
+.factory('Help_requests', function($resource, API_URL) {
+  var message =
+  $resource(API_URL + '/help_requests', {}, {
+    save: {
+      method: 'POST',
+      isArray: false
+    },
+  });
 });
