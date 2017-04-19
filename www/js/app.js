@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'building-blocks.controllers', 'building-blocks.services'])
+angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'building-blocks.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
