@@ -29,25 +29,25 @@ angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'buil
     templateUrl: 'templates/tabs.html'
   })
 
-  .state('tab.home', {
-    url: '/home',
-    views: {
-      'tab-home': {
-        templateUrl: 'templates/home/home.html',
-        controller: 'HomeController'
+    .state('tab.home', {
+      url: '/home',
+      views: {
+        'tab-home': {
+          templateUrl: 'templates/home/home.html',
+          controller: 'HomeController'
+        }
       }
-    }
-  })
+    })
 
-  .state('tab.message', {
-    url: '/message',
-    views: {
-      'tab-message': {
-        templateUrl: 'templates/message/message.html',
-        controller: 'MessageController'
+    .state('tab.help_request', {
+      url: '/help_request',
+      views: {
+        'tab-help_request': {
+          templateUrl: 'templates/help_request/help_request.html',
+          controller: 'HelpRequestController'
+        }
       }
-    }
-  });
-  $urlRouterProvider.otherwise('/tab/home');
+    });
+    $urlRouterProvider.otherwise('/tab/home');
 
 });

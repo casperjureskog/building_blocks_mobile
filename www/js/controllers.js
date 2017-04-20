@@ -4,7 +4,7 @@ angular.module('building-blocks.controllers', [])
   $scope.news = News.query();
 })
 
-.controller('MessageController', function($scope, HelpRequest) {
+.controller('HelpRequestController', function($scope, HelpRequest) {
   $scope.error = null;
   $scope.help_request = {};
 
