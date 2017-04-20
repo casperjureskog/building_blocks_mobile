@@ -1,7 +1,5 @@
 angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'building-blocks.services', 'ngResource'])
-    //.constant('API_URL', 'https://building-blockz.herokuapp.com/api/v1')
-    .constant('API_URL', 'http://localhost:3000/api/v1')
-
+    .constant('API_URL', 'https://building-blockz.herokuapp.com/api/v1')
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -14,6 +12,10 @@ angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'buil
       StatusBar.styleDefault();
     }
   });
+})
+
+.config(function($ionicConfigProvider) {
+    $ionicConfigProvider.tabs.position('bottom');
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
