@@ -15,4 +15,13 @@ angular.module('building-blocks.services', [])
       method: 'POST'
         }
   });
+})
+
+.factory('Facility', function($resource, API_URL) {
+  return $resource(API_URL + '/facilities', {}, {
+    query: {
+      method: 'GET',
+      isArray: true
+    },
+  });
 });

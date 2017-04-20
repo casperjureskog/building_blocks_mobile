@@ -37,6 +37,7 @@ angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'buil
           controller: 'HomeController'
         }
       }
+
     })
 
     .state('tab.help_request', {
@@ -49,5 +50,20 @@ angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'buil
       }
     });
     $urlRouterProvider.otherwise('/tab/home');
+
+    }
+  })
+
+  .state('tab.facilities', {
+    url: '/facilities',
+    views: {
+      'tab-facilities': {
+        templateUrl: 'templates/facilities/facilities.html',
+        controller: 'FacilityController'
+      }
+    }
+  });
+
+  $urlRouterProvider.otherwise('/tab/home');
 
 });
