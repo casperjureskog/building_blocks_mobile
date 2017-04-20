@@ -8,6 +8,7 @@ angular.module('building-blocks.controllers', [])
   $scope.error = null;
   $scope.help_request = {};
 
+
   $scope.createHelpRequest = function() {
     HelpRequest.save($scope.help_request, function(response){
       console.log(response);
