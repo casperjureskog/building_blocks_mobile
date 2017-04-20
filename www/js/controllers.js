@@ -6,8 +6,9 @@ angular.module('building-blocks.controllers', [])
 
 .controller('MessageController', function($scope, HelpRequest) {
   $scope.error = null;
-  $scope.help_request = { status: 'false'};
-  $scope.helpRequest = function() {
+  $scope.help_request = {};
+
+  $scope.createHelpRequest = function() {
     HelpRequest.save($scope.help_request, function(response){
       console.log(response);
       $scope.message = response.message;
