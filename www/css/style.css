@@ -51,9 +51,15 @@ img {
 
 .cards {
   border: 4px;
-  background: linear-gradient(to bottom, #fff, #fff, #23c1a0);
+  background: linear-gradient(to bottom, #fff, #eee, #eee, #23c1a0, #23c1a0);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ddd;
 }
 
+.obook {
+  color: #fff;
+}
 
 .title {
   color: #303030 ;
@@ -79,6 +85,7 @@ img {
 }
 
 .faci {
+  padding-top: 5px;
   padding-left: 5px;
   margin-bottom: 2px;
   height: 65px;
