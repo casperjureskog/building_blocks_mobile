@@ -46,8 +46,14 @@ img {
 .card {
   margin-bottom: -10px !important;
   margin-right: 10px !important;
-  align-content: inherit;
+  align-content: center;
 }
+
+.cards {
+  border: 4px;
+  background: linear-gradient(to bottom, #fff, #fff, #23c1a0);
+}
+
 
 .title {
   color: #303030 ;
@@ -73,13 +79,15 @@ img {
 }
 
 .faci {
-  padding-left: 50px;
-  margin-bottom: 5px;
+  padding-left: 5px;
+  margin-bottom: 2px;
   height: 65px;
 }
 
+
 .my-col-50 {
   float:left;width:50%;
+  height: 170px;
 }
 
 
