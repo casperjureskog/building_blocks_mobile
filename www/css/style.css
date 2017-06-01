@@ -97,10 +97,11 @@ img {
 
 
 .my-col-50 {
-  float:left;width:50%;
+  float: left;
+  width: 50%;
   height: 180px;
   padding-bottom: 20px !important;
-
+}
 
 
 .company-color {
@@ -175,5 +176,4 @@ h3 {
 .input-label {
   font-family: 'Julius Sans One', sans-serif;
 }
-
 

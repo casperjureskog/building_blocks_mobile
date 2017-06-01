@@ -1,7 +1,7 @@
 
 <ion-view cache-view="false" title='<img class="title-image" src="img/logoFinal.png" />'>
   <ion-content>
-    <h3 class="title">FACILITIES</h3>
+    <h3 class="title">GEMENSAMMA UTRYMMEN</h3><br>
     <div ng-repeat="facility in facilities" width="100%">
       <div  class="my-col-50" ng-if="$even">
         <button class="button" ng-click="openDatePicker(facility.id)">
@@ -10,7 +10,7 @@
           <div class="item item-divider fac">
             <h4 style="text-align: center;">{{facility.name}}</h4>
           </div>
-          <h5 class="obook"> Open Bookings </h5>
+          <h5 class="obook"> Boka </h5>
         </div>
         </button>
       </div>
@@ -21,7 +21,7 @@
           <div class="item item-divider fac">
             <h4 style="text-align: center;">{{facility.name}}</h4>
           </div>
-          <h5 class="obook"> Open Bookings </h5>
+          <h5 class="obook"> Boka </h5>
         </button>
       </div>
     </div>
