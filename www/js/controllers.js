@@ -31,6 +31,9 @@ angular.module('building-blocks.controllers', [])
           grabBookedSlots($scope.timeslots, $scope.blocks, $scope.facilities);
         });
       })
+      $scope.go_to_faci = function() {
+        $state.go('tab.facilities');
+      }
     });
     $scope.id = $stateParams.booking.id;
 

@@ -88,18 +88,12 @@ img {
   font-family: 'Droid', sans-serif;
 }
 
-.faci {
-  padding-top: 5px;
-  padding-left: 5px;
-  margin-bottom: 2px;
-  height: 65px;
-}
 
 
 .my-col-50 {
   float: left;
   width: 50%;
-  height: 180px;
+  height: 190px;
   padding-bottom: 20px !important;
 }
 
@@ -214,7 +208,7 @@ h3 {
 }
 
 .faci {
-  padding-top: 5px;
+  margin-top: 5px;
   padding-left: 5px;
   margin-bottom: 2px;
   height: 65px;
@@ -222,4 +216,23 @@ h3 {
 
 .space {
   height: 300px;
+}
+
+.faci2 {
+  margin-top: 15px;
+  padding-left: 5px;
+  margin-bottom: 2px;
+  height: 65px;
+}
+
+
+.pil {
+  height: 24px;
+}
+
+.back {
+  width: 100%;
+  position: relative;
+  top: 5px;
+  left: -90px;
 }
