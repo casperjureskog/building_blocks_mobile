@@ -236,3 +236,9 @@ h3 {
   top: 5px;
   left: -90px;
 }
+
+.title-image2 {
+  height: 25px;
+  position: relative;
+    left: -25px;
+}

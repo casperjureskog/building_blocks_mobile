@@ -71,13 +71,6 @@ angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'buil
         }
       })
 
-      .state('book', {
-        url: '/book/{booking:json}',
-        templateUrl: 'templates/book/book.html',
-        controller: 'BookController',
-        params: {booking: null}
-      })
-
       .state('tab.home', {
         url: '/home',
         views: {
@@ -88,24 +81,24 @@ angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'buil
         }
       })
 
-      .state('tab.help_request', {
-        url: '/help_request',
-        views: {
-          'tab-help_request': {
-            templateUrl: 'templates/help_request/help_request.html',
-            controller: 'HelpRequestController'
-          }
-        }
+      .state('book', {
+        url: '/book/{booking:json}',
+        templateUrl: 'templates/book/book.html',
+        controller: 'BookController',
+        params: {booking: null}
       })
 
-      .state('tab.facilities', {
+
+      .state('help_request', {
+        url: '/help_request',
+            templateUrl: 'templates/help_request/help_request.html',
+            controller: 'HelpRequestController'
+      })
+
+      .state('facilities', {
         url: '/facilities',
-        views: {
-          'tab-facilities': {
             templateUrl: 'templates/facilities/facilities.html',
             controller: 'FacilityController',
-          }
-        }
       })
 
 
@@ -115,14 +108,10 @@ angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'buil
         controller: 'NewsController',
       })
 
-      .state('tab.contact', {
+      .state('contact', {
         url: '/contact',
-        views: {
-          'tab-contact': {
             templateUrl: 'templates/contact/contact.html',
             controller: 'HomeController'
-          }
-        }
       });
 
     $urlRouterProvider.otherwise('/tab/home');
