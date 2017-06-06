@@ -7,6 +7,8 @@
   "dependencies": {
     "angular-resource": "1.5.3",
     "ionic-datepicker": "^1.2.1",
-    "ng-token-auth": "^0.0.29"
+    "ng-token-auth": "^0.0.29",
+    "chart.js": "2.5.0",
+    "angular-chart.js": "^1.1.1"
   }
 }

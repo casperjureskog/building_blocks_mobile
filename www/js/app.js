@@ -1,4 +1,4 @@
-angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'building-blocks.services', 'ngResource', 'ng-token-auth', 'ionic-datepicker'])
+angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'building-blocks.services', 'ngResource', 'ng-token-auth', 'ionic-datepicker', 'chart.js'])
     //.constant('API_URL', 'http://localhost:3000/api/v1')
     .constant('API_URL', 'https://building-blockz.herokuapp.com/api/v1')
 
@@ -76,6 +76,12 @@ angular.module('building-blocks', ['ionic', 'building-blocks.controllers', 'buil
         templateUrl: 'templates/book/book.html',
         controller: 'BookController',
         params: {booking: null}
+      })
+
+      .state('el', {
+        url: '/el',
+        templateUrl: 'templates/el/el.html',
+        controller: 'ElController',
       })
 
       .state('tab.home', {
