@@ -1,8 +1,31 @@
 angular.module('building-blocks.controllers', [])
 
-  .controller('HomeController', function ($scope, News) {
+  .controller('HomeController', function ($scope, $state, News) {
     $scope.news = News.query();
+    $scope.go_to_faci = function() {
+      $state.go('facilities');
+    }
+    $scope.go_to_info = function() {
+      $state.go('contact');
+    }
+    $scope.go_to_news = function() {
+      $state.go('news');
+    }
+    $scope.go_to_fel = function() {
+      $state.go('tab.help_request');
+    }
+    $scope.go_to_home = function() {
+      $state.go('tab.home');
+    }
   })
+
+  .controller('NewsController', function ($scope, $state, News) {
+    $scope.news = News.query();
+    $scope.go_to_home = function() {
+      $state.go('tab.home');
+    }
+  })
+
 
   .controller('ElController', function ($scope) {
     $scope.colors = ['#45b7cd', '#ff6384', '#ff8e72'];
@@ -30,7 +53,6 @@ angular.module('building-blocks.controllers', [])
   })
 
 
-
   .controller('BookController', function ($stateParams, $filter, $scope, $state, Facilities, Book, Booking, Block) {
     Book.query($stateParams.booking, function(response) {
       $scope.timeslots = response;
@@ -42,6 +64,9 @@ angular.module('building-blocks.controllers', [])
           grabBookedSlots($scope.timeslots, $scope.blocks, $scope.facilities);
         });
       })
+      $scope.go_to_faci = function() {
+        $state.go('facilities');
+      }
     });
     $scope.id = $stateParams.booking.id;
 
@@ -61,7 +86,7 @@ angular.module('building-blocks.controllers', [])
             });
           })
         });
-        $state.go('tab.facilities');
+        $state.go('facilities');
       });
     };
 
@@ -99,17 +124,21 @@ angular.module('building-blocks.controllers', [])
       closeOnSelect: false,       //Optional
       templateType: 'popup'       //Optional
     };
-
     $scope.openDatePicker = function (id) {
       $scope.id = id;
       ionicDatePicker.openDatePicker(ipObj1)
     };
+    $scope.go_to_home = function() {
+      $state.go('tab.home');
+    }
   })
 
-  .controller('HelpRequestController', function ($scope, $location, HelpRequest) {
+  .controller('HelpRequestController', function ($scope, $location, $state, HelpRequest) {
+    $scope.go_to_home = function() {
+      $state.go('tab.home');
+    }
     $scope.error = null;
     $scope.help_request = {};
-
     $scope.createHelpRequest = function () {
       HelpRequest.save($scope.help_request, function (response) {
         $scope.error = null;

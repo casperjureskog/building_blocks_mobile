@@ -56,7 +56,7 @@ img {
   border-width: 1px;
   border-color: #bbb;
   border-radius: 6px;
-  box-shadow: 2px 2px 4px #bbb;
+  box-shadow: 1px 1px 6px #444;
   vertical-align: top;
   margin-bottom: 10px !important;
 }
@@ -66,7 +66,7 @@ img {
 }
 
 .title {
-  color: #303030 ;
+  color: #fff ;
   padding-top: 5px;
   text-align: center;
   font-family: 'Droid', sans-serif;
@@ -88,18 +88,12 @@ img {
   font-family: 'Droid', sans-serif;
 }
 
-.faci {
-  padding-top: 5px;
-  padding-left: 5px;
-  margin-bottom: 2px;
-  height: 65px;
-}
 
 
 .my-col-50 {
   float: left;
   width: 50%;
-  height: 180px;
+  height: 190px;
   padding-bottom: 20px !important;
 }
 
@@ -109,8 +103,8 @@ img {
     color: white;
  }
 
-.contact {
-background:url('../img/contact.background.jpg') no-repeat center center fixed;
+ion-content {
+background:url('../img/exterior_skymning.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -121,6 +115,7 @@ background:url('../img/contact.background.jpg') no-repeat center center fixed;
         -moz-filter: saturate(50%);
         -o-filter: saturate(50%);
         -ms-filter: saturate(50%);
+        background-attachment: fixed;
 }
 
 .card-contact {
@@ -162,7 +157,7 @@ background:url('../img/contact.background.jpg') no-repeat center center fixed;
   text-align: center;
   width: 305px ;
   border-radius: 6px;
-  box-shadow: 2px 2px 4px #bbb;
+  box-shadow: 1px 1px 6px #444;
   margin-bottom: -15px !important;
   vertical-align: top;
 }
@@ -172,7 +167,7 @@ background:url('../img/contact.background.jpg') no-repeat center center fixed;
 }
 
 .desc {
-  color: #999;
+  color: #fff;
   text-align: center;
 }
 
@@ -199,3 +194,51 @@ h3 {
   font-family: 'Julius Sans One', sans-serif;
 }
 
+
+.cards {
+  border: 4px;
+  background: linear-gradient(to bottom, #fff, #eee, #eee, #23c1a0, #23c1a0);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #bbb;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px #999;
+  vertical-align: top;
+  margin-bottom: 10px !important;
+}
+
+.faci {
+  margin-top: 5px;
+  padding-left: 5px;
+  margin-bottom: 2px;
+  height: 65px;
+}
+
+.space {
+  height: 300px;
+}
+
+.faci2 {
+  margin-top: 15px;
+  padding-left: 5px;
+  margin-bottom: 2px;
+  height: 65px;
+}
+
+
+.pil {
+  height: 24px;
+}
+
+.back {
+  width: 100%;
+  position: relative;
+  top: 5px;
+  left: -90px;
+}
+
+.title-image2 {
+  height: 25px;
+  position: relative;
+    left: -25px;
+}
