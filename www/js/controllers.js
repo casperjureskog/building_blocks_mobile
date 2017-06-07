@@ -12,10 +12,13 @@ angular.module('building-blocks.controllers', [])
       $state.go('news');
     }
     $scope.go_to_fel = function() {
-      $state.go('tab.help_request');
+      $state.go('help_request');
     }
     $scope.go_to_home = function() {
       $state.go('tab.home');
+    }
+    $scope.go_to_el = function() {
+      $state.go('el');
     }
   })
 
@@ -27,7 +30,10 @@ angular.module('building-blocks.controllers', [])
   })
 
 
-  .controller('ElController', function ($scope) {
+  .controller('ElController', function ($scope, $state) {
+    $scope.go_to_home = function() {
+      $state.go('tab.home');
+    }
     $scope.colors = ['#45b7cd', '#ff6384', '#ff8e72'];
 
     $scope.labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
