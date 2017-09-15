@@ -6,14 +6,15 @@
     </button>
       <img class="title-image2" src="img/logoFinal.png" />
     </ion-nav-title>
-  <ion-content class="padding">
+  <ion-content class="book">
     <div class="desc">
-      <h3 class="title">{{facilities.name}}</h3>
-      <h5 class="bobe">Beskrivning</h5> {{facilities.description}}
-      <h5 class="bobe">Regler</h5> {{facilities.rules}}
-      <p ng-if="error">{{error}}</p>
+      <h3 class="title" style="color: #000;">{{facilities.name}}</h3>
+      <h5 class="bobe" style="color: #000;">Beskrivning</h5> {{facilities.description}}
+      <br><img src="../img/openlab{{facilities.name}}.png" style="width: 60%; height: 60%;">
+      <h5 class="bobe" style="color: #000;">Regler</h5> {{facilities.rules}}
+      <p ng-if="error" style="color: #000;">{{error}}</p>
       <br>
-      <p class="bobe" ng-if="message">{{messageex}}{{message}}</p>
+      <p class="bobe" ng-if="message" style="color: #000;">{{messageex}}{{message}}</p>
     </div>
     <div class="coli" ng-if="timeslots" ng-repeat="timeslot in timeslots">
         <button class="button" style="background-color:rgba(0,0,0,0); width: 113%;" ng-if="!timeslot.bookt" ng-click="openDatePicker(id, date, timeslot.start_time)">

@@ -133,6 +133,11 @@ background:url('../img/exterior_skymning.jpg') no-repeat center center fixed;
   background: #fff;
 }
 
+.book {
+  background: #fff;
+  color: #000;
+}
+
 .booked {
   padding-top: 5px;
   padding-bottom: 8px;
