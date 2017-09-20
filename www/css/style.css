@@ -297,3 +297,17 @@ h3 {
   color: #666;
   background-color:rgba(255,255,255,0.4);
 }
+
+.tag {
+    width:20px;
+    height:20px;
+    border-radius:50px;
+    font-size:16px;
+    color:#fff;
+    line-height:10px;
+    text-align:center;
+    background: red;
+    position: fixed;
+    margin-top: 5px;
+    margin-left: 5px;
+}
