@@ -249,7 +249,7 @@ h3 {
 }
 
 .space {
-  height: 280px;
+  height: 260px;
 }
 
 .faci2 {
@@ -322,6 +322,9 @@ h3 {
     width:20px;
     height:20px;
     border-radius:50px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #EAEAEA;
     font-size:16px;
     color:#fff;
     line-height:10px;
@@ -330,4 +333,10 @@ h3 {
     position: fixed;
     margin-top: -8px;
     margin-left: 4px;
+    box-shadow: 1px 1px 3px #666;
+}
+
+.bookcount {
+  color: #fff;
+  margin-top: 1px;
 }
