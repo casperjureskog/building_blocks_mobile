@@ -17,6 +17,7 @@
       <p class="bobe" ng-if="message" style="color: #000;">{{messageex}}{{message}}</p>
     </div>
     <div class="coli" ng-if="timeslots" ng-repeat="timeslot in timeslots">
+      <div ng-if="timeslot.max">
         <button class="button" style="background-color:rgba(0,0,0,0); width: 113%;" ng-if="!timeslot.bookt" ng-click="openDatePicker(id, date, timeslot.start_time)">
       <div class="unbooked">
        <h4 class="availble"> Boka </h4>
@@ -24,8 +25,17 @@
         {{timeslot.end_time}}
       </div>
       </button>
+    </div>
+    <div ng-if="timeslot.min">
+      <div ng-if="!timeslot.bookt" >
+    <div class="bookedmax">
+     <h4 class="unavailblemax"> Max 3 bookings </h4>
+      {{date}} {{timeslot.start_time}} -
+      {{timeslot.end_time}}
+    </div>
+  </div>
+  </div>
         <div ng-if="timeslot.bookt">
-          <br>
           <div class="booked">
             <h4 class="unavailble"> Bokad av {{timeslot.name}} </h4>
             {{date}} {{timeslot.start_time}} - {{timeslot.end_time}}
