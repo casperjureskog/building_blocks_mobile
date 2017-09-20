@@ -135,7 +135,7 @@ angular.module('building-blocks.controllers', [])
       },
       disabledDates: [],
       from: new Date(), //Optional
-      to: new Date(2019, 10, 30), //Optional
+      to: new Date(new Date().getTime()+(6*24*60*60*1000)), //Optional
       inputDate: new Date(),      //Optional
       mondayFirst: true,          //Optional
       disableWeekdays: [],       //Optional

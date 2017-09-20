@@ -9,9 +9,9 @@
   <ion-content class="book">
     <div class="desc">
       <h3 class="title" style="color: #000;">{{facilities.name}}</h3>
-      <h5 class="bobe" style="color: #000;">Beskrivning</h5> {{facilities.description}}
+      <h5 class="bobe" style="color: #000;">Beskrivning</h5> <span style="color: #000;">{{facilities.description}}</span>
       <br><img src="../img/openlab{{facilities.name}}.png" style="width: 60%; height: 60%;">
-      <h5 class="bobe" style="color: #000;">Regler</h5> {{facilities.rules}}
+      <h5 class="bobe" style="color: #000;">Regler</h5> <span style="color: #000;">{{facilities.rules}}</span>
       <p ng-if="error" style="color: #000;">{{error}}</p>
       <br>
       <p class="bobe" ng-if="message" style="color: #000;">{{messageex}}{{message}}</p>
@@ -27,7 +27,7 @@
         <div ng-if="timeslot.bookt">
           <br>
           <div class="booked">
-            <h4 class="unavailble"> Bokad </h4>
+            <h4 class="unavailble"> Bokad av {{timeslot.name}} </h4>
             {{date}} {{timeslot.start_time}} - {{timeslot.end_time}}
           </div>
         </div>
