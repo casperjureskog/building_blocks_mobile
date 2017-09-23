@@ -89,8 +89,8 @@ angular.module('building-blocks.controllers', [])
 
     $scope.date = $filter('date')($stateParams.booking.date, 'yyyy-MM-dd');
     $scope.dateandtime = $filter('date')($stateParams.booking.date, 'yyyy-MM-dd');
-    $scope.openDatePicker = function (id, date, start_time) {
-      Booking.save({facility_id: id, start_time: date +" "+start_time, name: "tenant"  }, function (response) {
+    $scope.openDatePicker = function (id, date, start_time, end_time) {
+      Booking.save({facility_id: id, start_time: date +" "+start_time, end_time: date +" "+end_time, name: "tenant"  }, function (response) {
         $scope.message = $scope.facilities.name;
         $scope.messageex = 'Tack för din bokning av ';
         Book.query($stateParams.booking, function(response) {
@@ -135,7 +135,7 @@ angular.module('building-blocks.controllers', [])
       },
       disabledDates: [],
       from: new Date(), //Optional
-      to: new Date(new Date().getTime()+(6*24*60*60*1000)), //Optional
+      to: new Date(new Date().getTime()+(7*24*60*60*1000)), //Optional
       inputDate: new Date(),      //Optional
       mondayFirst: true,          //Optional
       disableWeekdays: [],       //Optional
