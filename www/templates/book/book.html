@@ -17,10 +17,13 @@
       <p class="bobe" ng-if="message" style="color: #000;">{{messageex}}{{message}}</p>
     </div>
 
-      <ion-item>
-      <ion-label>Date</ion-label>
-      <ion-datetime displayFormat="MMM DD, YYYY HH:mm" [(ngModel)]="myDate"></ion-datetime>
-    </ion-item>
+    <div class="list">
+      <div class="item range range-positive">
+        <i class="icon ion-ios-sunny-outline"></i>
+        <input type="range" name="volume" min="0" max="100" value="33">
+        <i class="icon ion-ios-sunny"></i>
+      </div>
+    </div>
     <div class="coli" ng-if="timeslots" ng-repeat="timeslot in timeslots">
       <div ng-if="timeslot.max">
         <button class="button" style="background-color:rgba(0,0,0,0); width: 113%;" ng-if="!timeslot.bookt" ng-click="openDatePicker(id, date, timeslot.start_time, timeslot.end_time)">
@@ -44,6 +47,9 @@
           <div class="booked">
             <h4 class="unavailble"> Bokad av {{timeslot.name}} </h4>
             {{date}} {{timeslot.start_time}} - {{timeslot.end_time}}
+          </br>
+            <button class="button icon ion-close-circled" style="background-color:rgba(255,255,255,0); color: #fff; width: 5%; height: 5%"; ng-click="delete(id, timeslot.ids)">
+            </button>
           </div>
         </div>
       </div>
