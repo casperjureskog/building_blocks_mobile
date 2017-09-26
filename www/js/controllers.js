@@ -71,6 +71,12 @@ angular.module('building-blocks.controllers', [])
 
 
   .controller('BookController', function ($stateParams, $filter, $scope, $state, Facilities, Book, Booking, Bookingdel, Block) {
+    $scope.bookingInfo = [
+    {"hour": "08:00:00"},
+    {"hour": "09:00:00"},
+    {"hour": "10:00:00"},
+    {"hour": "11:00:00"}
+  ]
     Book.query($stateParams.booking, function(response) {
       $scope.timeslots = response;
       Facilities.query($stateParams.booking, function(response) {
@@ -93,7 +99,7 @@ angular.module('building-blocks.controllers', [])
     $scope.delete = function (id, ids) {
       Bookingdel.delete({facility_id: id, id: ids}, function (response) {
         $scope.message = $scope.facilities.name;
-        $scope.messageex = 'Tack för din bokning av ';
+        $scope.messageex = 'Din bokning är nu avbokad för ';
         Book.query($stateParams.booking, function(response) {
           $scope.timeslots = response;
           Facilities.query($stateParams.booking, function(response) {
@@ -109,7 +115,7 @@ angular.module('building-blocks.controllers', [])
 
       });
     };
-        
+
     $scope.openDatePicker = function (id, date, start_time, end_time) {
       Booking.save({facility_id: id, start_time: date +" "+start_time, end_time: date +" "+end_time, name: "tenant"  }, function (response) {
         $scope.message = $scope.facilities.name;

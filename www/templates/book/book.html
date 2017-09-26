@@ -18,13 +18,34 @@
     </div>
 
     <div class="list">
-      <div class="item range range-positive">
-        <i class="icon ion-ios-sunny-outline"></i>
-        <input type="range" name="volume" min="0" max="100" value="33">
-        <i class="icon ion-ios-sunny"></i>
-      </div>
-    </div>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Start time
+        </div>
+     <select ng-model="start_time" name="bookingInfo">
+       <option value="" disabled selected>Select your booking time</option>
+       <option value="{{info.hour}}" ng-repeat="info in bookingInfo" type="time">{{info.hour}}</option>
+     </select>
+     </label>
+     <label class="item item-input item-select">
+       <div class="input-label">
+         End time
+       </div>
+       <select ng-model="end_time" name="bookingInfo">
+       <option value="" disabled selected>Select your booking end time</option>
+       <option value="{{info.hour}}" ng-repeat="info in bookingInfo" type="time">{{info.hour}}</option>
+     </select>
+     </label>
+     <button class="button" style="background-color:rgba(0,0,0,0.3); width: 113%;" ng-click="openDatePicker(id, date, start_time, end_time)">
+     <div style="margin-top:20px">Booka rum {{facilities.name}}: {{start_time ? start_time : ''}} mellan {{end_time ? end_time : ''}}</div>
+   </button>
+
+
+</div>
+
     <div class="coli" ng-if="timeslots" ng-repeat="timeslot in timeslots">
+      <div ng-if="timeslot.start_time">
       <div ng-if="timeslot.max">
         <button class="button" style="background-color:rgba(0,0,0,0); width: 113%;" ng-if="!timeslot.bookt" ng-click="openDatePicker(id, date, timeslot.start_time, timeslot.end_time)">
       <div class="unbooked">
@@ -33,6 +54,7 @@
         {{timeslot.end_time}}
       </div>
       </button>
+    </div>
     </div>
     <div ng-if="timeslot.min">
       <div ng-if="!timeslot.bookt" >
