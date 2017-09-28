@@ -152,6 +152,8 @@ angular.module('building-blocks.controllers', [])
 
   .controller('FacilityController', function ($scope, $q, $state, Facility, ionicDatePicker) {
     $scope.facilities = Facility.query();
+    var bok_dur = $scope.facilities.bok_dur;
+      console.log($scope.facilities.bok_dur);
     function navigateToPage(date) {
       $state.go('book', {booking: {date: date, id: $scope.id}});
     }
