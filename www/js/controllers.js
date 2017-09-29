@@ -71,12 +71,6 @@ angular.module('building-blocks.controllers', [])
 
 
   .controller('BookController', function ($stateParams, $filter, $scope, $state, Facilities, Book, Booking, Bookingdel, Block) {
-    $scope.bookingInfo = [
-    {"hour": "08:00:00"},
-    {"hour": "09:00:00"},
-    {"hour": "10:00:00"},
-    {"hour": "11:00:00"}
-  ]
     Book.query($stateParams.booking, function(response) {
       $scope.timeslots = response;
       Facilities.query($stateParams.booking, function(response) {

@@ -18,34 +18,34 @@
     </div>
 
     <div class="list">
-
       <label class="item item-input item-select">
         <div class="input-label">
           Start time
         </div>
-     <select ng-model="start_time" name="bookingInfo">
-       <option value="" disabled selected>Select your booking time</option>
-       <option value="{{info.hour}}" ng-repeat="info in bookingInfo" type="time">{{info.hour}}</option>
-     </select>
-     </label>
-     <label class="item item-input item-select">
-       <div class="input-label">
-         End time
-       </div>
-       <select ng-model="end_time" name="bookingInfo">
-       <option value="" disabled selected>Select your booking end time</option>
-       <option value="{{info.hour}}" ng-repeat="info in bookingInfo" type="time">{{info.hour}}</option>
-     </select>
-</label>
-<label class="item">
-     <button ng-if="facilities.max2" class="button" style="background-color:rgba(0,0,0,0); width: 113%;" ng-click="openDatePicker(id, date, start_time, end_time)">
-       <div class="unbooked">
-     <div style="margin-top:20px">Booka rum {{facilities.name}}</br> {{start_time ? start_time : ''}} {{end_time ? end_time : ''}}</div>
-   </div>
-   </button>
-</label>
-
-</div>
+         <select ng-model="start_time" name="bookingInfo">
+           <option value="" disabled selected>Select your booking time</option>
+           <option value="{{timeslot.value}}" ng-repeat="timeslot in timeslots" ng-if="timeslot.time" type="time">{{timeslot.time}}</option>
+         </select>
+      </label>
+      <label class="item item-input item-select">
+         <div class="input-label">
+           End time
+         </div>
+        <select ng-model="end_time" name="bookingInfo">
+           <option value="" disabled selected>Select your booking end time</option>
+           <option value="{{timeslot.value}}" ng-repeat="timeslot in timeslots" ng-if="timeslot.time" type="time">{{timeslot.time}}</option>
+        </select>
+      </label>
+      <label class="item">
+        <div ng-if="end_time">
+          <button ng-if="start_time" ng-if="end_time" ng-if="facilities.max2" class="button" style="background-color:rgba(0,0,0,0); width: 113%;" ng-click="openDatePicker(id, date, start_time, end_time)">
+          <div class="unbooked">
+            <div style="margin-top:20px">Booka rum {{facilities.name}}</br> {{start_time ? start_time : ''}} {{end_time ? end_time : ''}}</div>
+          </div>
+         </button>
+        </div>
+      </label>
+    </div>
 
     <div class="coli" ng-if="timeslots" ng-repeat="timeslot in timeslots">
       <div ng-if="timeslot.start_time">
