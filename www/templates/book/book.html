@@ -11,7 +11,7 @@
       <h3 class="title" style="color: #000;">{{facilities.name}}</h3>
       <h5 class="bobe" style="color: #000;">Beskrivning</h5> <span style="color: #000;">{{facilities.description}}</span>
       <br><img src="../img/openlab{{facilities.name}}.png" style="width: 60%; height: 60%;">
-      <h5 class="bobe" style="color: #000;">Regler</h5> <span style="color: #000;">{{facilities.rules}}</span>
+      <h5 class="bobe" style="color: #000;">Regler</h5> <span style="color: #000;">{{facilities.min2}}</span>
       <p ng-if="error" style="color: #000;">{{error}}</p>
       <br>
       <p class="bobe" ng-if="message" style="color: #000;">{{messageex}}{{message}}</p>
@@ -37,12 +37,14 @@
         </select>
       </label>
       <label class="item">
-        <div ng-if="end_time">
-          <button ng-if="start_time" ng-if="end_time" ng-if="facilities.max2" class="button" style="background-color:rgba(0,0,0,0); width: 113%;" ng-click="openDatePicker(id, date, start_time, end_time)">
+        <div ng-if="end_time" > 
+        <div ng-if="facilities.max2">
+          <button ng-if="start_time" ng-if="end_time" class="button" style="background-color:rgba(0,0,0,0); width: 113%;" ng-click="openDatePicker(id, date, start_time, end_time)">
           <div class="unbooked">
             <div style="margin-top:20px">Booka rum {{facilities.name}}</br> {{start_time ? start_time : ''}} {{end_time ? end_time : ''}}</div>
           </div>
          </button>
+      </div>
         </div>
       </label>
     </div>
