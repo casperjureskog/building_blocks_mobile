@@ -112,8 +112,8 @@ angular.module('building-blocks.controllers', [])
 
     $scope.openDatePicker = function (id, date, start_time, end_time) {
       Booking.save({facility_id: id, start_time: date +" "+start_time, end_time: date +" "+end_time, name: "tenant"  }, function (response) {
-        $scope.message = $scope.facilities.name;
-        $scope.messageex = 'Tack för din bokning av ';
+        $scope.message = response.message;
+        $scope.error = response.error;
         Book.query($stateParams.booking, function(response) {
           $scope.timeslots = response;
           Facilities.query($stateParams.booking, function(response) {
